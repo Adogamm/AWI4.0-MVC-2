@@ -1,3 +1,53 @@
+$def with (result, img)
+
 <div class="container">
-    <h3 class="text-center my-3">Persona</h3>
+    <img src="$img" alt="Usuario" class="img-fluid mx-auto d-block my-3" width="100px" height="auto">
+    <div class="row">
+        <div class="col-sm-4">
+            <form>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Nombre:</label>
+                    <input type="text" readonly value="$result['NOMBRE']" class="form-control text-center mx-auto d-block" style="width: 350px;">
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Matricula:</label>
+                    <input type="text" readonly value="$result['MATRICULA']" class="form-control text-center mx-auto d-block" style="width: 350px;">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-block btn-success mt-5">Actualizar</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <form>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Primer apellido:</label>
+                    <input type="text" readonly value="$result['PRIMER_APELLIDO']" class="form-control text-center mx-auto d-block" style="width: 350px;">
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Edad:</label>
+                    <input type="text" readonly value="$result['EDAD']" class="form-control text-center mx-auto d-block" style="width: 350px;">
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Estado:</label>
+                    <input type="text" readonly value="$result['ESTADO']" class="form-control text-center mx-auto d-block" style="width: 350px;">
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <form>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Segundo apellido:</label>
+                    <input type="text" readonly value="$result['SEGUNDO_APELLIDO']" class="form-control text-center mx-auto d-block" style="width: 350px;">
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Sexo:</label>
+                    <input type="text" readonly value="$result['SEXO']" class="form-control text-center mx-auto d-block" style="width: 350px;">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-block btn-danger mt-5">Eliminar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
