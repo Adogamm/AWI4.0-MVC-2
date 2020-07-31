@@ -1,0 +1,84 @@
+<div class="container">
+    <img src="../static/registro.png" alt="Registro escolar" class="img-fluid mx-auto mt-2 d-block my-3" width="90px" height="auto">
+    <h2 class="text-center">Insert</h2>
+    <h5 class="text-center">Ingresa los datos que se solicitan a continuación</h5>
+    <div class="row">
+        <div class="col-lg-12">
+            <form method="POST" action="">
+                <div class="form-group">
+                    <label for="matricula">Matricula</label>
+                    <input type="number" name="matricula" id="matricula" max="9999999999" min="1000000000" class="form-control" placeholder="Ingresa los diez digitos de la matricula">
+                </div>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="nombre"nombreid="" class="form-control" placeholder="Nombre del usuario a registrar">
+                </div>
+                <div class="form-group">
+                    <label for="primer_apellido">Primer apellido</label>
+                    <input type="text" class="form-control" name="primer_apellido" id="primer_apellido" placeholder="Primer apellido del usuario a registrar">
+                </div>
+                <div class="form-group">
+                    <label for="segundo_apellido">Segundo apellido</label>
+                    <input type="text" class="form-control" name="segundo_apellido" id="segundo_apellido" placeholder="Segundo apellido del usuario a registrar">
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad</label>
+                    <input type="number" name="edad" id="edad" max="999" min="0" class="form-control" placeholder="Ingresa la edad del usuario a registrar">
+                </div>
+                <div class="form-group">
+                    <label for=""  >Sexo</label>
+                    <select name="sexo" id="sexo" class="form-control">
+                        <option value="empty">-Sexo-</option>
+                        <option value="1">Hombre</option>
+                        <option value="2">Mujer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for=""  >Fecha de nacimiento</label>
+                    <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="matricula">Estado</label>
+                    <select name="estado" id="estado" class="form-control">
+                        <option value="empty" class="text-muted">-Selecciona el estado-</option>
+                        <option value="1">Aguascalientes</option>
+                        <option value="2">Baja California Norte</option>
+                        <option value="3">Baja California Sur</option>
+                        <option value="4">Campeche</option>
+                        <option value="5">Coahuila</option>
+                        <option value="6">Colima</option>
+                        <option value="7">Chiapas</option>
+                        <option value="8">Chihuahua</option>
+                        <option value="9">Ciudad de México</option>
+                        <option value="10">Durango</option>
+                        <option value="11">Guanajuato</option>
+                        <option value="12">Guerrero</option>
+                        <option value="13">Hidalgo</option>
+                        <option value="14">Jalisco</option>
+                        <option value="15">México</option>
+                        <option value="16">Michoacán</option>
+                        <option value="17">Morelos</option>
+                        <option value="18">Nayarit</option>
+                        <option value="19">Nuevo León</option>
+                        <option value="20">Oaxaca</option>
+                        <option value="21">Puebla</option>
+                        <option value="22">Querétaro</option>
+                        <option value="23">Quintana Roo</option>
+                        <option value="24">San Luis Potosí</option>
+                        <option value="25">Sinaloa</option>
+                        <option value="26">Sonora</option>
+                        <option value="27">Tabasco</option>
+                        <option value="28">Tamaulipas</option>
+                        <option value="29">Tlaxcala</option>
+                        <option value="30">Veracruz</option>
+                        <option value="31">Yucatán</option>
+                        <option value="32">Zacatecas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                      <input type="submit" value="Guardar" class="form-control btn btn-info mx-auto d-block" style="width: 350px;">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
