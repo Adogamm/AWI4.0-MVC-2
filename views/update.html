@@ -1,3 +1,91 @@
+$def with (result, img, sex, estado_origen)
+
 <div class="container">
-    <h3 class="text-center my-3">Update</h3>
+    <img src="$img" alt="Usuario" class="img-fluid mx-auto d-block my-3" width="100px" height="auto">
+    <h5 class="text-center">Reingresa los datos que deseas actualizar</h5><br>
+    <div class="row">
+        <div class="col-sm-4">
+            <form method="POST" action="">
+                <input type="hidden" id="id_persona" name="id_persona" value="$result['ID_PERSONA']">
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Nombre:</label>
+                    <input type="text" value="$result['NOMBRE']" id="nombre" name="nombre" class="form-control text-center mx-auto d-block" style="width: 350px;">
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Matricula:</label>
+                    <input type="number" id="matricula" name="matricula" value="$result['MATRICULA']" class="form-control text-center mx-auto d-block" style="width: 350px;" min="1000000000" max="9999999999">
+                </div>
+                <div class="form-group">
+                    <a href="/list" class="text-white btn btn-block btn-info mt-5">Regresar</a>
+                </div>
+        </div>
+        <div class="col-sm-4">
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Primer apellido:</label>
+                    <input type="text" value="$result['PRIMER_APELLIDO']" id="primer_apellido" name="primer_apellido" class="form-control text-center mx-auto d-block" style="width: 350px;">
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Edad:</label>
+                    <input type="number" value="$result['EDAD']" id="edad" name="edad" class="form-control text-center mx-auto d-block" style="width: 350px;">
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Estado:</label>
+                    <select name="estado" id="estado" class="form-control text-center">
+                        <option value="empty">-Estado-</option>
+                        <option value="1">Aguascalientes</option>
+                        <option value="2">Baja California Norte</option>
+                        <option value="3">Baja California Sur</option>
+                        <option value="4">Campeche</option>
+                        <option value="5">Coahuila</option>
+                        <option value="6">Colima</option>
+                        <option value="7">Chiapas</option>
+                        <option value="8">Chihuahua</option>
+                        <option value="9">Ciudad de México</option>
+                        <option value="10">Durango</option>
+                        <option value="11">Guanajuato</option>
+                        <option value="12">Guerrero</option>
+                        <option value="13">Hidalgo</option>
+                        <option value="14">Jalisco</option>
+                        <option value="15">México</option>
+                        <option value="16">Michoacán</option>
+                        <option value="17">Morelos</option>
+                        <option value="18">Nayarit</option>
+                        <option value="19">Nuevo León</option>
+                        <option value="20">Oaxaca</option>
+                        <option value="21">Puebla</option>
+                        <option value="22">Querétaro</option>
+                        <option value="23">Quintana Roo</option>
+                        <option value="24">San Luis Potosí</option>
+                        <option value="25">Sinaloa</option>
+                        <option value="26">Sonora</option>
+                        <option value="27">Tabasco</option>
+                        <option value="28">Tamaulipas</option>
+                        <option value="29">Tlaxcala</option>
+                        <option value="30">Veracruz</option>
+                        <option value="31">Yucatán</option>
+                        <option value="32">Zacatecas</option>
+                    </select>
+                    <small class="text-form text-danger">*Campo obligatorio</small>
+                </div>
+        </div>
+        <div class="col-sm-4">
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Segundo apellido:</label>
+                    <input type="text" value="$result['SEGUNDO_APELLIDO']" id="segundo_apellido" name="segundo_apellido" class="form-control text-center mx-auto d-block" style="width: 350px;">
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Sexo:</label>
+                    <select name="sexo" id="sexo" class="form-control text-center">
+                        <option value="empty">-Sexo-</option>
+                        <option value="1">Hombre</option>
+                        <option value="2">Mujer</option>
+                    </select>
+                    <small class="form-text text-danger">*Campo obligatorio</small>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Actualizar" class="btn btn-block btn-success mt-4">
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
