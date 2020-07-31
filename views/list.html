@@ -2,9 +2,16 @@ $def with(result)
 <div class="container">
     <img src="../static/lista-de-verificacion.png" alt="Lista de verificación" class="img-fluid mx-auto d-block my-3" width="100px" height="auto">
     <h4 class="text-center">Lista de todos los usuarios registrados</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <a href="/insert" class="btn btn-sm btn-dark mx-auto d-block">Insertar</a>
+            </div>
+        </div>
+    </div>
     <table class="table mt-5">
         <thead class="thead-dark">
-            <th scope="col">#</th>
             <th scope="col">Matricula</th>
             <th scope="col">Nombre</th>
             <th scope="col">Primer Apellido</th>
@@ -18,7 +25,6 @@ $def with(result)
         <tbody>
             $for row in result:
             <tr>
-                <th>$row['ID_PERSONA']</th>
                 <td>$row['MATRICULA']</td>
                 <td><a href="/view/$row['ID_PERSONA']" class="text-dark">$row['NOMBRE']</a></td>
                 <td>$row['PRIMER_APELLIDO']</td>
