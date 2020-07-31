@@ -65,6 +65,20 @@ class Personas():
         except Exception as e:
             print(e)
 
+    def insert(self, matricula, nombre, primer_apellido, segundo_apellido, edad, sexo, estado):
+        try:
+            self.connect()
+            query = ("INSERT INTO PERSONAS (MATRICULA, NOMBRE, PRIMER_APELLIDO, SEGUNDO_APELLIDO, EDAD, SEXO, ESTADO) VALUES (%s, %s, %s, %s, %s, %s, %s);")
+            values = (matricula, nombre, primer_apellido, segundo_apellido, edad, sexo, estado)
+            self.cursor.execute(query, values)
+            self.cnx.commit()
+            self.cursor.close()
+            self.cnx.close()
+            return True
+        except Exception as e:
+            print(e)
+            return False
+
 objeto = Personas()
 objeto.connect()
 for row in objeto.view(1):
