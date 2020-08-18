@@ -4,10 +4,11 @@ class Personas():
     def connect(self):
         try:
             self.cnx = mysql.connector.connect(
-                user = 'AdolfoLeBa',
-                password = 'SoyAdolfo_1',
-                host = '127.0.0.1',
-                database = 'REGISTRO',
+                user = 'edvpgj5wh9zmqczv',
+                password = 'odgxk9yd3ng4405u',
+                host = 'g8r9w9tmspbwmsyo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+                port = 3306,
+                database = 'yjk0glndkjvfo3jg',
                 auth_plugin='mysql_native_password'
             )
             self.cursor = self .cnx.cursor(buffered=True)
