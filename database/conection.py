@@ -5,7 +5,7 @@ class Personas():
         try:
             self.cnx = mysql.connector.connect(
                 user = 'ykrqakjreho5ixu4',
-                password = 't4e32ci83m3amuuq',
+                password = 'q6g41zoaf69x7zux',
                 host = 'z37udk8g6jiaqcbx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
                 port = 3306,
                 database = 'hd3tg32ltrpxg4m2',
